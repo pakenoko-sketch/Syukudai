@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eef7ff">
+  <title>宿題管理</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div class="date" id="today"></div>
+      <h1>📚 宿題管理</h1>
+      <p>今日の宿題をひとつずつ終わらせよう！</p>
+    </header>
+
+    <section class="summary">
+      <div class="summary-top">
+        <span>今日の進み具合</span>
+        <strong id="progressText">0 / 0 完了</strong>
+      </div>
+      <div class="progress">
+        <div id="progressBar"></div>
+      </div>
+      <div class="counts">
+        <div>
+          <strong id="remainingCount">0</strong>
+          <span>残り</span>
+        </div>
+        <div>
+          <strong id="completedCount">0</strong>
+          <span>完了</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="add-section">
+      <h2>宿題を追加</h2>
+      <div class="input-row">
+        <input id="taskInput" type="text"
+          placeholder="例：算数のプリント">
+        <button id="addButton">追加</button>
+      </div>
+    </section>
+
+    <section class="tasks-section">
+      <div class="section-title">
+        <h2>残っている宿題</h2>
+        <span id="taskCount">0件</span>
+      </div>
+      <div id="taskList"></div>
+      <button id="completeButton" class="complete-button">
+        選択した宿題を完了
+      </button>
+    </section>
+
+    <section class="finished-section">
+      <h2>今日終わった宿題</h2>
+      <div id="finishedList"></div>
+    </section>
+
+    <footer>
+      毎日0時になると宿題の完了状態がリセットされます。
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
